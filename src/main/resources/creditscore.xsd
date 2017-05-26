@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://creditscoresoapservice.com/soap"
+           targetNamespace="http://creditscoresoapservice.com/soap" elementFormDefault="qualified">
+
+    <xs:element name="getCreditScoreRequest">
+        <xs:complexType>
+            <xs:sequence>
+           	    <xs:element name="ssn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getCreditScoreResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="creditscore" type="tns:creditscore"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="creditscore">
+        <xs:sequence>
+            <xs:element name="creditScore" type="xs:int"/>
+            <xs:element name="ssn" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+</xs:schema>
